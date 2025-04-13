@@ -11,7 +11,7 @@ module.exports = {
       option.setName('option')
         .setDescription('Choose a service.')
         .setRequired(true)
-        .addChoice("STEAM", "STEAM" "BRAWL STARS", "BRAWL STARS" "SPOTİFY", "SPOTİFY") // Add options here
+        .addChoice("STEAM", "STEAM"; "BRAWL STARS", "BRAWL STARS"; "SPOTİFY", "SPOTİFY") // Add options here
     ),
   async execute(interaction) {
     const allowedChannelId = process.env.FGEN_CHANNEL_ID;
