@@ -18,7 +18,7 @@ module.exports = {
     
     // Check if the command is executed in the allowed channel
     if (interaction.channelId !== allowedChannelId) {
-      return interaction.reply('**You can only use this command in <#1184643439141343242> channel!**');
+      return interaction.reply('**Check dm**');
     }
 
     const option = interaction.options.getString('option');
