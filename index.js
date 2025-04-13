@@ -3,6 +3,9 @@ const { Client, Intents, MessageEmbed } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
 const fs = require('fs');
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000;
 
 const client = new Client({
     intents: [
@@ -61,5 +64,13 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
   }
 });
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 client.login(process.env.TOKEN);
