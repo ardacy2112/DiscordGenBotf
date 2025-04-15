@@ -13,7 +13,8 @@ module.exports = {
         .setRequired(true)
         .addChoice('STEAM', 'STEAM') 
         .addChoice('EPIC', 'EPIC')
-        .addChoice('VALORANT', 'VALORANT')             // Add options here
+        .addChoice('VALORANT', 'VALORANT')
+        .addChoice('LOL', 'LOL')             // Add options here
     ),
   async execute(interaction) {
     const allowedChannelId = process.env.BGEN_CHANNEL_ID;
