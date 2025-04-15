@@ -14,7 +14,8 @@ module.exports = {
         .addChoice('STEAM', 'STEAM')
         .addChoice('EA', 'EA')
         .addChoice('VALORANT', 'VALORANT')
-        .addChoice('EPIC', 'EPIC')// Add options here
+        .addChoice('EPIC', 'EPIC')
+        .addChoice('GTA5EPIC', 'GTA5EPIC')// Add options here
     ),
   async execute(interaction) {
     const allowedChannelId = process.env.VGEN_CHANNEL_ID;
