@@ -10,10 +10,8 @@ const client = new Client({
 });
 
 // Configuration (Edit these values)
-const config = {
-  VOICE_CHANNEL_ID: '1361671422694391960', // Replace with voice channel ID
-  BOT_TOKEN: 'YOUR_BOT_TOKEN' // Replace with your bot token
-};
+const targetChannel = client.channels.cache.get(process.env.VOICE_CHANNEL_ID);
+client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
   try {
